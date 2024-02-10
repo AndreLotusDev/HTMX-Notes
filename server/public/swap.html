@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Example</title>
+
+    <!-- Import HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+
+    <!-- Import tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="text-center">
+        <h1 class="text-2xl font-bold my-5">
+            HTMX Example
+        </h1>
+
+        <button hx-get="/users" hx-swap="innerHTML" 
+            class="bg-blue-500 text-white py-2 px-5 my-5 rounded-lg">
+            Fetch users
+        </button>
+
+        <!-- Create a div where center a table that comes from a request -->
+        <div id="resultsTable" class="mx-auto my-5 max-w-3xl">
+        </div>
+    </div>
+</body>
+
+</html>
