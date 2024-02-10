@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Polling</title>
+    <!-- Include Bootstrap CSS for spinner styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include htmx library -->
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body>
+    <h1 class="text-center">A ultima noticia atualizada</h1>
+
+    <div id="news" hx-get="/news" hx-trigger="load" hx-swap="innerHTML" hx-indicator="#spinner">
+        
+    </div>
+
+    <!-- Bootstrap spinner -->
+    <div id="spinner" class="spinner-border text-primary">
+        <span class="sr-only">Loading...</span>
+    </div>
+</body>
+</html>
